@@ -1,0 +1,6 @@
+$header-height: 10vh;
+$footer-height: 10vh;
+$location-bar-height: 5vh;
+$main-height: calc(
+  100vh - $header-height - $footer-height - $location-bar-height
+);
