@@ -1,3 +1,9 @@
+$primary: #14213dff;
+$secondary: #e5e5e5ff;
+$light: #ffffff;
+$dark: #000000ff;
+$warning: #fca311ff;
+
 @use "scss/sizes" as *;
 @import "~bootstrap/scss/bootstrap";
 
@@ -18,14 +24,18 @@ code {
 
 header {
   height: $header-height;
-}
 
-footer {
-  height: $footer-height;
+  a {
+    color: $light;
+    &:hover {
+      color: darken($light, 20%);
+    }
+  }
 }
 
 main {
   min-height: $main-height;
+  background-color: lighten($primary, 10%);
 }
 
 .active {
@@ -45,7 +55,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid lightgrey;
+    border: 1px solid $secondary;
     border-radius: 0.5rem;
   }
 
@@ -63,17 +73,20 @@ main {
 
   .card-lower {
     .col {
-      border: 1px solid lightgrey;
+      border: 1px solid $secondary;
+      text-align: center;
     }
 
     .row {
       &:nth-child(2n -1) {
         .col {
+          border-radius: 0.5rem 0.5rem 0 0;
           border-bottom: none;
         }
       }
       &:nth-child(2n) {
         .col {
+          border-radius: 0 0 0.5rem 0.5rem;
           border-top: none;
         }
       }

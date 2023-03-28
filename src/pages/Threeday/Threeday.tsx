@@ -22,7 +22,7 @@ const Threeday = () => {
 
   return (
     <Container>
-      <h2 className="text-center m-4">Three Day Forecast</h2>
+      <h2 className="text-center m-4 text-light">Three Day Forecast</h2>
 
       {weather ? (
         <Row>

@@ -4,7 +4,6 @@ import {
   Coords,
   useLocationContext,
 } from "../../context/Location.context";
-import { createPortal } from "react-dom";
 import ZipModal from "../ZipModal/ZipModal";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
@@ -50,7 +49,7 @@ const LocationBar = () => {
   };
 
   useEffect(() => {
-    !navCoords && setNavCoords(getCoordsFromNavigator());
+    setNavCoords(getCoordsFromNavigator());
   }, []);
 
   useEffect(() => {
@@ -75,6 +74,7 @@ const LocationBar = () => {
         </Col>
         <Col>
           <Button
+            data-testid="go"
             variant="secondary"
             onClick={
               activeCoordType === CoordType.nav

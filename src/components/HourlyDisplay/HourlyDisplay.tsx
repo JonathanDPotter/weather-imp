@@ -25,7 +25,7 @@ const HourlyDisplay: FC<Props> = ({ weather }) => {
   } = weather;
 
   return (
-    <Card className="my-4">
+    <Card className="my-4 p-0">
       <Card.Header>
         <Card.Title>
           {new Date(time).toLocaleDateString("en-US", {

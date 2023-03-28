@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <Container>
-      <h2 className="text-center m-4">Current</h2>
+      <h2 className="text-center m-4 text-light">Current</h2>
       {weather ? <CurrentDisplay weather={weather} /> : <Loading />}
     </Container>
   );

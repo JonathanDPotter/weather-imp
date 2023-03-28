@@ -37,7 +37,7 @@ const Hourly = () => {
 
   return (
     <Container fluid>
-      <h2 className="text-center m-4">Hourly</h2>
+      <h2 className="text-center m- text-light">Hourly</h2>
       <Row className=" d-flex flex-row">
         {hoursArray ? (
           hoursArray.map((hour, i) => {

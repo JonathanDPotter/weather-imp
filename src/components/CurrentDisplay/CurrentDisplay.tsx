@@ -37,7 +37,7 @@ const CurrentDisplay: FC<Props> = ({ weather }) => {
       <Card.Body>
         <Container className="main">
           <Card.Text className="condition">{condition.text}</Card.Text>
-          <Card.Img src={condition.icon} alt="condition icon" />
+          <Card.Img src={condition.icon} alt={condition.text} />
           <Card.Text className="temp">{temp_f}°</Card.Text>
           <Card.Text>Feels Like {feelslike_f}°</Card.Text>
         </Container>

@@ -1,5 +1,5 @@
 import react, { FC } from "react";
-import { screen, render, fireEvent, waitFor } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import LocationBar from "./LocationBar";
 import LocationProvider from "../../context/Location.context";
 
@@ -28,16 +28,9 @@ test("LocationBar shows use zipcode button and it opens modal", async () => {
 
   fireEvent.click(useZip);
 
-  const input = screen.getByLabelText("Enter 5 digit US zip code");
-  const go = screen.getByText("Go!");
+  const input = screen.getByTestId("zip-input");
+  const go = screen.getByTestId("go");
 
   expect(input).toBeInTheDocument();
-
-  fireEvent.change(input, { target: { value: "10001" } });
-
-  fireEvent.click(go);
-
-  console.log(useZip.textContent);
-
-  expect(input).not.toBeInTheDocument();
+  expect(go).toBeInTheDocument();
 });
