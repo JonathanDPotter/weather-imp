@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useLocationContext } from "../../context/Location.context";
 import Forecast from "../../interfaces/forecast";
@@ -22,12 +22,12 @@ const Threeday = () => {
 
   return (
     <Container>
-      <h2 className="text-center m-4 text-light">Three Day Forecast</h2>
+      <h2 className="text-center text-light">Three Day Forecast</h2>
 
       {weather ? (
         <Row>
           {weather.forecast.forecastday.map((day) => (
-            <Col>
+            <Col key={day.date_epoch}>
               <DayDisplay weather={day} />
             </Col>
           ))}

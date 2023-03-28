@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { ForecastHour } from "../../interfaces/forecast";
 

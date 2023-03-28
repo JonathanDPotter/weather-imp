@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useEffect, useState } from "react";
+import { ChangeEvent, FC, useEffect, useState } from "react";
 import { CoordType, useLocationContext } from "../../context/Location.context";
 import { Button, Col, Form, Modal } from "react-bootstrap";
 

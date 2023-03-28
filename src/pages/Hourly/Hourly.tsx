@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container, Row } from "react-bootstrap";
 import Forecast, { ForecastHour } from "../../interfaces/forecast";
 import { useLocationContext } from "../../context/Location.context";
 import HourlyDisplay from "../../components/HourlyDisplay/HourlyDisplay";
@@ -37,7 +37,7 @@ const Hourly = () => {
 
   return (
     <Container fluid>
-      <h2 className="text-center m- text-light">Hourly</h2>
+      <h2 className="text-center text-light">Hourly</h2>
       <Row className=" d-flex flex-row">
         {hoursArray ? (
           hoursArray.map((hour, i) => {

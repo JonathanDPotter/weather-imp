@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Current from "../../interfaces/current";
 import { Card, Col, Container, Row } from "react-bootstrap";
 

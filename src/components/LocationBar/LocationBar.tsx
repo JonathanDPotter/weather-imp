@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   CoordType,
   Coords,
@@ -33,7 +33,7 @@ const LocationBar = () => {
 
   const getCoordsFromNavigator = () => {
     const response: Coords = { latitude: "1", longitude: "1" };
-    if (process.env.NODE_ENV == "test") return response;
+    if (process.env.NODE_ENV === "test") return response;
 
     navigator.geolocation.getCurrentPosition((pos) => {
       const { latitude, longitude } = pos.coords;
@@ -65,8 +65,8 @@ const LocationBar = () => {
   }, [activeCoords]);
 
   return (
-    <Container fluid className="py-2 border-bottom">
-      <Row className="align-items-center">
+    <Container fluid className="location-bar bg-secondary">
+      <Row className="align-items-center h-100">
         <Col>
           <span data-testid="location">
             {locationString ? locationString : "Getting Location..."}
@@ -75,7 +75,7 @@ const LocationBar = () => {
         <Col>
           <Button
             data-testid="go"
-            variant="secondary"
+            variant="warning"
             onClick={
               activeCoordType === CoordType.nav
                 ? toggleShowZipModal

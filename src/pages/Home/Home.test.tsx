@@ -1,5 +1,4 @@
-import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Home from "./Home";
 
 test("Home page displays the title 'Current'", () => {

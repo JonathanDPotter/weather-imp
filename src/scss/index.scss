@@ -4,7 +4,7 @@ $light: #ffffff;
 $dark: #000000ff;
 $warning: #fca311ff;
 
-@use "scss/sizes" as *;
+@use "sizes" as *;
 @import "~bootstrap/scss/bootstrap";
 
 body {
@@ -36,14 +36,30 @@ header {
 main {
   min-height: $main-height;
   background-color: lighten($primary, 10%);
+
+  a {
+    color: $warning;
+    &:hover {
+      color: lighten($warning, 20%);
+    }
+  }
 }
 
-.active {
-  text-decoration: underine;
+.location-bar {
+  height: $location-bar-height;
+}
+
+.nav-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .inactive {
   text-decoration: none;
+}
+
+.indent {
+  text-indent: 2ch;
 }
 
 .card {

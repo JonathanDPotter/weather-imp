@@ -1,4 +1,4 @@
-import react, { FC } from "react";
+import { FC } from "react";
 import { screen, render, fireEvent } from "@testing-library/react";
 import LocationBar from "./LocationBar";
 import LocationProvider from "../../context/Location.context";

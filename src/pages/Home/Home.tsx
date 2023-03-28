@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Current from "../../interfaces/current";
 import { useLocationContext } from "../../context/Location.context";
 import CurrentDisplay from "../../components/CurrentDisplay/CurrentDisplay";
@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <Container>
-      <h2 className="text-center m-4 text-light">Current</h2>
+      <h2 className="text-center text-light">Current</h2>
       {weather ? <CurrentDisplay weather={weather} /> : <Loading />}
     </Container>
   );
