@@ -21,7 +21,7 @@ const Home = () => {
   }, [activeCoords]);
 
   return (
-    <Container>
+    <Container className="py-4">
       <h2 className="text-center text-light">Current</h2>
       {weather ? <CurrentDisplay weather={weather} /> : <Loading />}
     </Container>

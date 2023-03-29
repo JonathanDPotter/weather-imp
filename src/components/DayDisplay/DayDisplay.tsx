@@ -24,7 +24,7 @@ const DayDisplay: FC<Props> = ({ weather }) => {
 
   return (
     <Card className="my-4">
-      <Card.Header>
+      <Card.Header className="bg-secondary">
         <Card.Title>
           {new Date(weather.hour[0].time).toLocaleDateString("en-US", {
             month: "short",

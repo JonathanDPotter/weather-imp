@@ -36,7 +36,7 @@ const Hourly = () => {
   }, [weather]);
 
   return (
-    <Container fluid>
+    <Container fluid className="py-4">
       <h2 className="text-center text-light">Hourly</h2>
       <Row className=" d-flex flex-row">
         {hoursArray ? (

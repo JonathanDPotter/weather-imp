@@ -21,7 +21,7 @@ const Threeday = () => {
   }, [activeCoords]);
 
   return (
-    <Container>
+    <Container className="py-4">
       <h2 className="text-center text-light">Three Day Forecast</h2>
 
       {weather ? (

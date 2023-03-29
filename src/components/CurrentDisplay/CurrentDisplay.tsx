@@ -30,8 +30,8 @@ const CurrentDisplay: FC<Props> = ({ weather }) => {
   });
 
   return (
-    <Card>
-      <Card.Header>
+    <Card className="my-4">
+      <Card.Header className="bg-secondary">
         <Card.Title>{today}</Card.Title>
       </Card.Header>
       <Card.Body>
