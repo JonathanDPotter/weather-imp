@@ -1,11 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { Container, Nav, Navbar, Row } from "react-bootstrap";
+import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import { ReactComponent as ImpLogo } from "../../assets/impLogo.svg";
 
 const Header = () => {
   return (
     <Navbar bg="primary" variant="dark" as={"header"}>
       <Container>
-        <Navbar.Brand>Weather Imp</Navbar.Brand>
+        <Navbar.Brand className="h1">
+          <ImpLogo className="me-3" />
+          <h1 className="d-inline">Weather Imp</h1>
+        </Navbar.Brand>
+
         <Nav>
           <Nav.Item>
             <NavLink

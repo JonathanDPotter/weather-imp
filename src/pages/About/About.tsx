@@ -16,6 +16,10 @@ const About = () => {
         It then presents the current weather conditions, the hourly forecast and
         the three-day forecast on seperate pages that the user can navigate to.
       </p>
+      <p className={paragraphClassNames}>
+        The repository for this app is on GitHub{" "}
+        <a href="https://github.com/JonathanDPotter/weather-imp">here</a>.
+      </p>
       <h3 className={headingClassNames}>Technologies Used</h3>
       <p className={paragraphClassNames}>
         I built this app using React and Typescript. This app uses Bootstrap,
