@@ -47,16 +47,13 @@ const LocationBar = () => {
   const toggleShowZipModal = () => {
     setShowZipModal(!showZipModal);
   };
-
+  
   useEffect(() => {
-    setNavCoords(getCoordsFromNavigator());
-  }, []);
-
-  useEffect(() => {
+    !navCoords && setNavCoords(getCoordsFromNavigator());
     activeCoordType === CoordType.nav
       ? navCoords && setActiveCoords(navCoords)
       : zipCoords && setActiveCoords(zipCoords);
-  }, [navCoords, activeCoordType]);
+  }, [navCoords, zipCoords, activeCoordType]);
 
   useEffect(() => {
     (async () => {
