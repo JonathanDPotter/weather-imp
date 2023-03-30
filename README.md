@@ -9,3 +9,5 @@ The app gets your device's location from navigator.geolocation or gets another l
 ## Technologies Used
 
 I built this app using React and Typescript. This app uses Bootstrap, React Bootstrap and SASS for styling, Jest for testing, React Router for routing, Axios for API calls, and React Context for global state management.
+
+![image](https://user-images.githubusercontent.com/30156468/228906938-370ec7ab-adea-43b7-ad03-4fa86c0ca305.png)
