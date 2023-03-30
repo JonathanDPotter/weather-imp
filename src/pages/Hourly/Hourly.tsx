@@ -7,7 +7,7 @@ import Loading from "../../components/Loading/Loading";
 
 const Hourly = () => {
   const [weather, setWeather] = useState<Forecast | null>(null);
-  const [hoursArray, setHoursArray] = useState<ForecastHour[]>([]);
+  const [hoursArray, setHoursArray] = useState<ForecastHour[] | null>(null);
 
   const { activeCoords } = useLocationContext();
 

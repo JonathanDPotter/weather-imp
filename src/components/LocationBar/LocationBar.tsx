@@ -18,7 +18,7 @@ const LocationBar = () => {
     setActiveCoordType,
   } = useLocationContext();
 
-  const [locationString, setLocationString] = useState("");
+  const [locationString, setLocationString] = useState<string | null>(null);
   const [showZipModal, setShowZipModal] = useState(false);
 
   const getCity = async (coords: Coords) => {
