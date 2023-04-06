@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import {  Container, Nav, Navbar } from "react-bootstrap";
 import { ReactComponent as ImpLogo } from "../../assets/impLogo.svg";
 
 const Header = () => {

@@ -5,6 +5,9 @@ import { useLocationContext } from "../../context/Location.context";
 import HourlyDisplay from "../../components/HourlyDisplay/HourlyDisplay";
 import Loading from "../../components/Loading/Loading";
 
+// TODO: add tests
+
+
 const Hourly = () => {
   const [weather, setWeather] = useState<Forecast | null>(null);
   const [hoursArray, setHoursArray] = useState<ForecastHour[] | null>(null);

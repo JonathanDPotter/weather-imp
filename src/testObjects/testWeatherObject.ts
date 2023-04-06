@@ -1,0 +1,43 @@
+const weather = {
+  location: {
+    name: "string",
+    region: "string",
+    country: "string",
+    lat: 1,
+    lon: 1,
+    tz_id: "string",
+    localtime_epoch: 1,
+    localtime: "string",
+  },
+  current: {
+    last_updated_epoch: 1,
+    last_updated: "string",
+    temp_c: 1,
+    temp_f: 1,
+    is_day: 1,
+    condition: {
+      text: "string",
+      icon: "string",
+      code: 1,
+    },
+    wind_mph: 1,
+    wind_kph: 1,
+    wind_degree: 1,
+    wind_dir: "string",
+    pressure_mb: 1,
+    pressure_in: 1,
+    precip_mm: 1,
+    precip_in: 1,
+    humidity: 1,
+    cloud: 1,
+    feelslike_c: 1,
+    feelslike_f: 1,
+    vis_km: 1,
+    vis_miles: 1,
+    uv: 1,
+    gust_mph: 1,
+    gust_kph: 1,
+  },
+};
+
+export default weather;

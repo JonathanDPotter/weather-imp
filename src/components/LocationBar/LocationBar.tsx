@@ -47,7 +47,7 @@ const LocationBar = () => {
   const toggleShowZipModal = () => {
     setShowZipModal(!showZipModal);
   };
-  
+
   useEffect(() => {
     !navCoords && setNavCoords(getCoordsFromNavigator());
     activeCoordType === CoordType.nav
@@ -60,6 +60,12 @@ const LocationBar = () => {
       activeCoords && setLocationString(await getCity(activeCoords));
     })();
   }, [activeCoords]);
+
+  useEffect(() => {
+    locationString &&
+      locationString === "undefined undefined, undefined" &&
+      window.location.reload();
+  }, [locationString]);
 
   return (
     <Container fluid className="location-bar bg-secondary">

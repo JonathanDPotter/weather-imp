@@ -1,11 +1,11 @@
 import { FC } from "react";
 import Current from "../../interfaces/current";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { JsxElement } from "typescript";
 
 interface Props {
   weather: Current;
 }
-
 const CurrentDisplay: FC<Props> = ({ weather }) => {
   const {
     condition,
@@ -32,13 +32,15 @@ const CurrentDisplay: FC<Props> = ({ weather }) => {
   return (
     <Card className="my-4">
       <Card.Header className="bg-secondary">
-        <Card.Title>{today}</Card.Title>
+        <Card.Title role="heading">{today}</Card.Title>
       </Card.Header>
       <Card.Body>
         <Container className="main">
           <Card.Text className="condition">{condition.text}</Card.Text>
           <Card.Img src={condition.icon} alt={condition.text} />
-          <Card.Text className="temp">{temp_f}°</Card.Text>
+          <Card.Text data-testid="temp" className="temp">
+            {Math.round(temp_f)}°
+          </Card.Text>
           <Card.Text>Feels Like {feelslike_f}°</Card.Text>
         </Container>
         <Container className="card-lower">

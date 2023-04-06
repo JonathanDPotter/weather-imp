@@ -5,6 +5,9 @@ import Forecast from "../../interfaces/forecast";
 import DayDisplay from "../../components/DayDisplay/DayDisplay";
 import Loading from "../../components/Loading/Loading";
 
+// TODO: add tests
+
+
 const Threeday = () => {
   const { activeCoords } = useLocationContext();
 

@@ -6,6 +6,8 @@ interface Props {
   weather: ForecastHour;
 }
 
+// TODO: add tests
+
 const HourlyDisplay: FC<Props> = ({ weather }) => {
   const {
     time,
@@ -27,7 +29,7 @@ const HourlyDisplay: FC<Props> = ({ weather }) => {
   return (
     <Card className="my-4 p-0">
       <Card.Header className="bg-secondary">
-        <Card.Title>
+        <Card.Title role="heading">
           {new Date(time).toLocaleDateString("en-US", {
             hour: "numeric",
             month: "short",
@@ -40,7 +42,7 @@ const HourlyDisplay: FC<Props> = ({ weather }) => {
         <Container className="main">
           <Card.Text className="condition">{condition.text}</Card.Text>
           <Card.Img src={condition.icon} alt="condition icon" />
-          <Card.Text className="temp">{temp_f}°</Card.Text>
+          <Card.Text className="temp">{Math.round(temp_f)}°</Card.Text>
           <Card.Text>Feels Like {feelslike_f}°</Card.Text>
         </Container>
         <Container className="card-lower">

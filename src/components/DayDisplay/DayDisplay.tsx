@@ -22,16 +22,16 @@ const DayDisplay: FC<Props> = ({ weather }) => {
     condition,
   } = weather.day;
 
+  const day = new Date(weather.hour[0].time).toLocaleDateString("en-US", {
+    month: "short",
+    weekday: "long",
+    day: "numeric",
+  });
+
   return (
     <Card className="my-4">
       <Card.Header className="bg-secondary">
-        <Card.Title>
-          {new Date(weather.hour[0].time).toLocaleDateString("en-US", {
-            month: "short",
-            weekday: "long",
-            day: "numeric",
-          })}
-        </Card.Title>
+        <Card.Title role="heading">{day}</Card.Title>
       </Card.Header>
       <Card.Body>
         <Container className="main">
@@ -53,12 +53,12 @@ const DayDisplay: FC<Props> = ({ weather }) => {
           </Row>
           <Row>
             <Col>
-              <Card.Text>{maxtemp_f}°F</Card.Text>
-              <Card.Text>{maxtemp_c}°C</Card.Text>
+              <Card.Text>{Math.round(maxtemp_f)}°F</Card.Text>
+              <Card.Text>{Math.round(maxtemp_c)}°C</Card.Text>
             </Col>
             <Col>
-              <Card.Text>{mintemp_f}°F</Card.Text>
-              <Card.Text>{mintemp_c}°C</Card.Text>
+              <Card.Text>{Math.round(mintemp_f)}°F</Card.Text>
+              <Card.Text>{Math.round(mintemp_c)}°C</Card.Text>
             </Col>
           </Row>
           <Row>
