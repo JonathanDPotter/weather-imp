@@ -56,18 +56,12 @@ const LocationBar = () => {
   }, [navCoords, zipCoords, activeCoordType]);
 
   useEffect(() => {
-    (async () => {
+    const setLocation = async () =>
       activeCoords && setLocationString(await getCity(activeCoords));
-    })();
-  }, [activeCoords]);
 
-  useEffect(() => {
-    (async () => {
-      activeCoords &&
-        locationString === "undefined undefined, undefined" &&
-        setLocationString(await getCity(activeCoords));
-    })();
-  }, [locationString]);
+    !locationString && setLocation();
+    locationString === "undefined undefined, undefined" && setLocation();
+  }, [activeCoords, locationString]);
 
   return (
     <Container fluid className="location-bar bg-secondary">
