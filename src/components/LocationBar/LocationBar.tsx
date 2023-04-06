@@ -61,6 +61,14 @@ const LocationBar = () => {
     })();
   }, [activeCoords]);
 
+  useEffect(() => {
+    (async () => {
+      activeCoords &&
+        locationString === "undefined undefined, undefined" &&
+        setLocationString(await getCity(activeCoords));
+    })();
+  }, [locationString]);
+
   return (
     <Container fluid className="location-bar bg-secondary">
       <Row className="align-items-center h-100">
