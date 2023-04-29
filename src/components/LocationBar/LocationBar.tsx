@@ -56,6 +56,7 @@ const LocationBar = () => {
   }, [navCoords, zipCoords, activeCoordType]);
 
   useEffect(() => {
+    console.log(locationString);
     const setLocation = async () =>
       activeCoords && setLocationString(await getCity(activeCoords));
 
